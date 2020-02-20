@@ -27,13 +27,11 @@ public class HealthManager : MonoBehaviour
     {
         var player = model.player;
         health = player.health.GetHealth();
-        text.text = "Health:" + health.ToString();
+        text.text = "Health: " + health.ToString();
     }
 
     public void GetHealth(int value)
     {
-        var player = model.player;
-        health = value;
-        text.text = "Health:" + health.ToString();
+        text.text = "Health: " + value.ToString();
     }
 }
