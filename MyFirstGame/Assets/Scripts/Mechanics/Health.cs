@@ -13,7 +13,7 @@ namespace Platformer.Mechanics
         /// <summary>
         /// The maximum hit points for the entity.
         /// </summary>
-        public int maxHP = 1;
+        public int maxHP = 3;
 
         /// <summary>
         /// Indicates if the entity should be considered 'alive'.
@@ -44,6 +44,11 @@ namespace Platformer.Mechanics
             }
         }
 
+        public void Injured()
+        {
+            currentHP = Mathf.Clamp(currentHP - 1, 0, maxHP + 1);
+        }
+
         /// <summary>
         /// Decrement the HP of the entitiy until HP reaches 0.
         /// </summary>
@@ -54,7 +59,12 @@ namespace Platformer.Mechanics
 
         void Awake()
         {
-            currentHP = maxHP;
+            currentHP = 3;
+        }
+
+        public int GetHealth()
+        {
+            return currentHP;
         }
     }
 }

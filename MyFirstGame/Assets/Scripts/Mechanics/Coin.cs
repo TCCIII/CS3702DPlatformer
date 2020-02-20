@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Platformer.Gameplay;
 
 public class Coin : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Coin : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             ScoreManager.instance.ChangeScore(coinValue);
+            HealthManager.instance.GetHealth();
         }
     }
 }

@@ -8,8 +8,9 @@ public class ScoreManager : MonoBehaviour
 	public static ScoreManager instance;
 	public TextMeshProUGUI text;
 	int score;
-	// Start is called before the first frame update
-	void Start()
+
+    // Start is called before the first frame update
+    void Start()
 	{
 		if (instance == null)
 		{
@@ -21,6 +22,5 @@ public class ScoreManager : MonoBehaviour
 	{
 		score += coinValue;
 		text.text = "Coins:" + score.ToString(); 
-
 	}
 }

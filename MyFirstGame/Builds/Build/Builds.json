@@ -1,6 +1,6 @@
 {
-"companyName": "DefaultCompany",
-"productName": "MyFirstGame",
+"companyName": "CS371 Group D",
+"productName": "Rogue 2D Platformer",
 "dataUrl": "Builds.data.unityweb",
 "wasmCodeUrl": "Builds.wasm.code.unityweb",
 "wasmFrameworkUrl": "Builds.wasm.framework.unityweb",

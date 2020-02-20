@@ -21,6 +21,8 @@ namespace Platformer.Mechanics
         internal AudioSource _audio;
         SpriteRenderer spriteRenderer;
 
+        private bool invincible = false;
+
         public Bounds Bounds => _collider.bounds;
 
         void Awake()
@@ -36,9 +38,13 @@ namespace Platformer.Mechanics
             var player = collision.gameObject.GetComponent<PlayerController>();
             if (player != null)
             {
-                var ev = Schedule<PlayerEnemyCollision>();
-                ev.player = player;
-                ev.enemy = this;
+                if (!invincible)
+                {
+                    var ev = Schedule<PlayerEnemyCollision>();
+                    ev.player = player;
+                    ev.enemy = this;
+                }
+                
             }
         }
 
@@ -51,5 +57,10 @@ namespace Platformer.Mechanics
             }
         }
 
+        IEnumerator Invulnerability()
+        {
+            yield return new WaitForSecondsRealtime(3);
+            invincible = false;
+        }
     }
 }
