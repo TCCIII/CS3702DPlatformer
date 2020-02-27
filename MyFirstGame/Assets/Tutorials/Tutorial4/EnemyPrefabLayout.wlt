@@ -427,7 +427,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Prefabs
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Ethan\MyFirstGame
+  m_LastProjectPath: D:\Users\TCCIII\UnityProjects\CS370 2D Platformer
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:

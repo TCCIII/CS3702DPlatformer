@@ -60,7 +60,6 @@ namespace Platformer.Mechanics
         void Awake()
         {
             currentHP = 3;
-            HealthManager.instance.GetHealth(currentHP);
         }
 
         public int GetHealth()

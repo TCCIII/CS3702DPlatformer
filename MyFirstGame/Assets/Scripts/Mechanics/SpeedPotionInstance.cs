@@ -56,7 +56,7 @@ namespace Platformer.Mechanics
             var ev = Schedule<PlayerSpeedPotionCollision>();
             ev.speedPotion = this;
             ev.player = player;
-            player.maxSpeed = 10;
+            player.maxSpeed = 8;
         }
     }
 }

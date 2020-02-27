@@ -56,7 +56,7 @@ namespace Platformer.Mechanics
             var ev = Schedule<PlayerJetpackCollision>();
             ev.jetPack = this;
             ev.player = player;
-            model.jumpModifier = 2.5f;
+            model.jumpModifier = 1.3f;
         }
     }
 }
