@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Gameplay;
 
-public class Coin : MonoBehaviour
+namespace Plateformer.Mechanics
 {
-    public int coinValue = 1;
-
-    private void OnTriggerEnter2D(Collider2D other)
+    public class Coin : MonoBehaviour
     {
-        if (other.gameObject.CompareTag("Player"))
+        public static int coinValue = 1;
+
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            ScoreManager.instance.ChangeScore(coinValue);
+            if (other.gameObject.CompareTag("Player"))
+            {
+                ScoreManager.instance.ChangeScore(coinValue);
+            }
         }
     }
 }

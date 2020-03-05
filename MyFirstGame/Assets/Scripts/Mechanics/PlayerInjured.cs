@@ -4,6 +4,7 @@ using Platformer.Core;
 using Platformer.Model;
 using UnityEngine;
 using static Platformer.Core.Simulation;
+using Platformer.Mechanics;
 
 namespace Platformer.Gameplay
 {

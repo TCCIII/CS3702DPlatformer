@@ -6,21 +6,21 @@ using static Platformer.Core.Simulation;
 namespace Platformer.Mechanics
 {
     /// <summary>
-    /// Represebts the current vital statistics of some game entity.
+    /// Represents the current vital statistics of some game entity.
     /// </summary>
     public class Health : MonoBehaviour
     {
         /// <summary>
         /// The maximum hit points for the entity.
         /// </summary>
-        public int maxHP = 3;
+        public static int maxHP = 3;
 
         /// <summary>
         /// Indicates if the entity should be considered 'alive'.
         /// </summary>
         public bool IsAlive => currentHP > 0;
 
-        int currentHP;
+        public static int currentHP;
 
         /// <summary>
         /// Increment the HP of the entity.

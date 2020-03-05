@@ -6,32 +6,35 @@ using TMPro;
 using static Platformer.Core.Simulation;
 using Platformer.Core;
 
-public class HealthManager : MonoBehaviour
+namespace Platformer.Mechanics
 {
-    public static HealthManager instance;
-    public TextMeshProUGUI text;
-    int health;
-
-    PlatformerModel model = Simulation.GetModel<PlatformerModel>();
-
-    // Start is called before the first frame update
-    void Start()
+    public class HealthManager : MonoBehaviour
     {
-        if (instance == null)
+        public static HealthManager instance;
+        public TextMeshProUGUI text;
+        public static int health;
+
+        PlatformerModel model = Simulation.GetModel<PlatformerModel>();
+
+        // Start is called before the first frame update
+        void Start()
         {
-            instance = this;
+            if (instance == null)
+            {
+                instance = this;
+            }
         }
-    }
 
-    public void GetHealth()
-    {
-        var player = model.player;
-        health = player.health.GetHealth();
-        text.text = "Health: " + health.ToString();
-    }
+        public void GetHealth()
+        {
+            var player = model.player;
+            health = player.health.GetHealth();
+            text.text = "Health: " + health.ToString();
+        }
 
-    public void GetHealth(int value)
-    {
-        text.text = "Health: " + value.ToString();
+        public void GetHealth(int value)
+        {
+            text.text = "Health: " + value.ToString();
+        }
     }
 }
