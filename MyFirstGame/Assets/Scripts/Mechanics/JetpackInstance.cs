@@ -40,7 +40,7 @@ namespace Platformer.Mechanics
 
             if (other.gameObject.tag == "Player")
             {
-                Destroy(gameObject);
+                //Destroy(gameObject);
             }
         }
 
