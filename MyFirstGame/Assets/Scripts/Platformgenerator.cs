@@ -5,6 +5,11 @@ using UnityEngine;
 public class Platformgenerator : MonoBehaviour
 {
     public GameObject thePlatform;
+
+    GameObject[] spawnPlatforms;
+    GameObject currentPlatform;
+    int index;
+
     public Transform generationPoint;
     public float distancebetween;
 
@@ -12,7 +17,11 @@ public class Platformgenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        platformWidth = thePlatform.GetComponent<BoxCollider2D>().size.x;
+        spawnPlatforms = GameObject.FindGameObjectsWithTag("platform");
+        index = Random.Range(0, spawnPlatforms.Length);
+        currentPlatform = spawnPlatforms[index];
+
+        platformWidth = currentPlatform.GetComponent<BoxCollider2D>().size.x;
 
     }
 
@@ -21,8 +30,11 @@ public class Platformgenerator : MonoBehaviour
     {
         if(transform.position.x<generationPoint.position.x)
         {
+            index = Random.Range(0, spawnPlatforms.Length);
+            currentPlatform = spawnPlatforms[index];
+
             transform.position = new Vector3(transform.position.x + platformWidth + distancebetween, transform.position.y, transform.position.z);
-                Instantiate(thePlatform, transform.position, transform.rotation);
+                Instantiate(currentPlatform, transform.position, transform.rotation);
         }
         
     }

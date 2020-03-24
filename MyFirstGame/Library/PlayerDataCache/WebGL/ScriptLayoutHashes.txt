@@ -29,6 +29,7 @@ d227987243593b32ae57394d06018643 Cinemachine.dll:Cinemachine.CinemachineFixedSig
 71f7f12b8d0f4fd73590db8bcb6d453c Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.Bloom
 e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 af93f9c42e90877a9ba31e37adfd900c Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.MotionBlur
+87012adc37f81cdf1ed059308467ba68 Assembly-CSharp.dll:.SpawnItem
 e5399e1e8f25c6555a8e130ec7722c04 Assembly-CSharp.dll:Platformer.Mechanics.SpeedPotionInstance
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.InteractiveTutorials.Core.Scripts.dll:Unity.InteractiveTutorials.SelectionRoot
 3fc7ee92412f03b2aa10ee6da3eb81b7 Assembly-CSharp.dll:Platformer.Mechanics.TokenInstance
@@ -69,6 +70,7 @@ c22e69ae62a8213e75a5c3a83775a882 Assembly-CSharp.dll:Platformer.Mechanics.Jetpac
 f542c1afca5bb4022f91fdda19b8d622 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.DepthOfField
 d3c76b14a25eebd3a3323dd43297919c Unity.TextMeshPro.dll:TMPro.TMP_InputField
 3258f693908bf16e2baac52a26036d52 Assembly-CSharp.dll:Platformer.Mechanics.GameController
+54d9bf1272b2dae6b7055b8004714b75 Assembly-CSharp.dll:.Pickup
 89cbcfa77989979e1843b899c81094a8 Assembly-CSharp.dll:.EmitParticlesOnLand
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -153,6 +155,7 @@ ee98729079998eb63435f99f41b30b9e Assembly-CSharp.dll:Platformer.Mechanics.Health
 ee98729079998eb63435f99f41b30b9e Assembly-CSharp.dll:.ScoreManager
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TemplateEditorDetection
 7ec884402e82a75991e16446671fbc6d Assembly-CSharp.dll:Platformer.View.ParallaxLayer
+c23c5d640b57710aaaa28f84e6d47948 Assembly-CSharp.dll:.Slot
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 6987e53805e8a29a4a553f91e9a02ba2 Cinemachine.dll:Cinemachine.CinemachineOrbitalTransposer
 7ca765ad7969aae95e8011264b9c4046 Cinemachine.dll:Cinemachine.CinemachineTriggerAction
@@ -222,6 +225,7 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 8fe40c8bf353515a50e0f2195adb646d Assembly-CSharp.dll:.PlatformerSpeedPad
 f6deae28b27a51627c56b8454123117f Assembly-CSharp.dll:.Jiggler
+b14448967e3efcf715ebdbaba8a3797f Assembly-CSharp.dll:.Inventory
 6225eb0973ab0af667bc5f9d1b1b18de Cinemachine.dll:Cinemachine.CinemachineCollider
 bd50beb95120324d8c4e8386692b6e82 Cinemachine.dll:Cinemachine.CinemachineBlenderSettings
 c0201dbecd85f700bcdff493a272631d Cinemachine.dll:Cinemachine.CinemachineImpulseSource
