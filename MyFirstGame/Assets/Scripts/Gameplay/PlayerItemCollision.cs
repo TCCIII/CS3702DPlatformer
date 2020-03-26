@@ -13,6 +13,10 @@ namespace Platformer.Gameplay
     {
         public PlayerController player;
         public JumpBootsInstance jumpBoots;
+        public CoinDoubleInstance coinDoub;
+        public GreenMushInstance greenMush;
+        public JetpackInstance jetPack;
+        public SpeedPotionInstance speedPotion;
 
         PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 

@@ -54,7 +54,7 @@ namespace Platformer.Mechanics
             if (controller != null)
                 collected = true;
             //send an event into the gameplay system to perform some behaviour.
-            var ev = Schedule<PlayerCoinDoubleCollision>();
+            var ev = Schedule<PlayerItemCollision>();
             ev.coinDoub = this;
             ev.player = player;
             Coin.coinValue = 2;

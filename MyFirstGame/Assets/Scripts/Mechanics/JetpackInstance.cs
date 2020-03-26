@@ -53,7 +53,7 @@ namespace Platformer.Mechanics
             if (controller != null)
                 collected = true;
             //send an event into the gameplay system to perform some behaviour.
-            var ev = Schedule<PlayerJetpackCollision>();
+            var ev = Schedule<PlayerItemCollision>();
             ev.jetPack = this;
             ev.player = player;
             model.jumpModifier = 1.3f;

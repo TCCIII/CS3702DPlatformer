@@ -53,7 +53,7 @@ namespace Platformer.Mechanics
             if (controller != null)
                 collected = true;
             //send an event into the gameplay system to perform some behaviour.
-            var ev = Schedule<PlayerSpeedPotionCollision>();
+            var ev = Schedule<PlayerItemCollision>();
             ev.speedPotion = this;
             ev.player = player;
             player.maxSpeed = 8;
