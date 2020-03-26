@@ -17,26 +17,13 @@ public class Slot : MonoBehaviour
         {
             inventory.isFull[i] = false;
         }
-        /*if (Input.GetButtonDown("Inventory1"))
+        if (Input.GetButtonDown("Inventory" + (i+1)))
         {
-
+            if(inventory.isFull[i])
+            {
+                DropItem();
+            }
         }
-        if (Input.GetButtonDown("Inventory2"))
-        {
-
-        }
-        if (Input.GetButtonDown("Inventory3"))
-        {
-
-        }
-        if (Input.GetButtonDown("Inventory4"))
-        {
-
-        }
-        if (Input.GetButtonDown("Inventory5"))
-        {
-
-        }*/
     }
 
     public void DropItem()

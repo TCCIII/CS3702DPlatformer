@@ -55,13 +55,11 @@ public class Platformgenerator : MonoBehaviour
 
     float GetPlatformWidth(PolygonCollider2D poly)
     {
-        ScoreManager.instance.SetScore(0);
         float maxX = 0;
         Vector2[] points = poly.points;
 
         for (int pathIndex = 0; pathIndex < points.Length; pathIndex++)
         {
-            ScoreManager.instance.ChangeScore(1);
             if (points[pathIndex].x > maxX)
             {
                 maxX = points[pathIndex].x;
@@ -74,11 +72,6 @@ public class Platformgenerator : MonoBehaviour
     {
         float maxX = 0;
         float endY = -99;
-
-        for (int pathIndex = 0; pathIndex < poly.pathCount; pathIndex++)
-        {
-
-        }
 
         foreach (Vector2 point in poly.points)
         {
