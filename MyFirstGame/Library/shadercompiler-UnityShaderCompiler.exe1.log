@@ -1,15 +1,35 @@
+<<<<<<< Updated upstream
 Base path: D:/Program Files/Unity/2018.4.18f1/Editor/Data
+=======
+Base path: C:/Program Files/Unity/Hub/Editor/2019.3.7f1/Editor/Data
+>>>>>>> Stashed changes
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
   api=4 insize=2059 outsize=349 ok=1
 Cmd: compileComputeKernel
   api=4 insize=1176 outsize=781 ok=1
 Cmd: compileComputeKernel
+<<<<<<< Updated upstream
   api=4 insize=3070 outsize=47805 ok=1
+=======
+  api=4 insize=10881 outsize=10437 ok=1
+>>>>>>> Stashed changes
 Cmd: compileComputeKernel
   api=4 insize=10881 outsize=9849 ok=1
 Cmd: compileComputeKernel
+<<<<<<< Updated upstream
   api=4 insize=18299 outsize=8693 ok=1
 Cmd: compileComputeKernel
   api=4 insize=1957 outsize=545 ok=1
 Cmd: initializeCompiler
+=======
+  api=4 insize=18299 outsize=8781 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1957 outsize=545 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3072 outsize=353 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1806 outsize=1389 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2044 outsize=1037 ok=1
+>>>>>>> Stashed changes
