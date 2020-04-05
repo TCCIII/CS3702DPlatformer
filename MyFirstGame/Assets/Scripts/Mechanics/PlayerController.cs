@@ -121,18 +121,18 @@ namespace Platformer.Mechanics
 
             if (move.x > 0.01f)
             {
-                //spriteRenderer.flipX = false;
                 if (moveForward)
                 {
+                    //spriteRenderer.flipX = false;
                     transform.Rotate(0f, 180f, 0f);
                 }
                 moveForward = false;
             }
             else if (move.x < -0.01f)
             {
-                //spriteRenderer.flipX = true;
                 if (!moveForward)
                 {
+                    //spriteRenderer.flipX = true;
                     transform.Rotate(0f, 180f, 0f);
                 }
                 moveForward = true;

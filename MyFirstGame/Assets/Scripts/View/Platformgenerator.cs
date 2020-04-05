@@ -56,52 +56,62 @@ public class Platformgenerator : MonoBehaviour
     float GetPlatformWidth(PolygonCollider2D poly)
     {
         Vector2[] path;
+        float maxX = 0;
 
+        //Traverse each path
         for (int pathIndex = 0; pathIndex < poly.pathCount; pathIndex++)
         {
             path = poly.GetPath(pathIndex);
 
-        }
-
-        //ScoreManager.instance.SetScore(poly.pathCount);
-
-        float maxX = 0;
-        //Vector2[] points = poly.points;
-
-        foreach (Vector2 point in poly.points)
-        {
-            if (point.x >= maxX)
+            //Traverse each point within the path
+            foreach (Vector2 point in path)
             {
-                maxX = point.x;
+                //Check for maxX
+                if (point.x >= maxX)
+                {
+                    maxX = point.x;
+                }
             }
         }
-
-        /*for (int pathIndex = 0; pathIndex < points.Length; pathIndex++)
-        {
-            
-        } */
         return maxX;
     }
 
     float GetPlatformHeight(PolygonCollider2D poly)
     {
+        Vector2[] path;
         float maxX = 0;
         float endY = -99;
 
-        foreach (Vector2 point in poly.points)
+        //Traverse each path
+        for (int pathIndex = 0; pathIndex < poly.pathCount; pathIndex++)
         {
-            if (point.x >= maxX)
+            path = poly.GetPath(pathIndex);
+            //Traverse each point within the path
+            foreach (Vector2 point in path)
             {
-                maxX = point.x;
+                //Check for maxX
+                if (point.x >= maxX)
+                {
+                    maxX = point.x;
+                }
             }
         }
-        foreach (Vector2 point in poly.points)
+        //Now with maxX, check for the height
+        //Traverse each path
+        for (int pathIndex = 0; pathIndex < poly.pathCount; pathIndex++)
         {
-            if (point.x >= maxX)
+            path = poly.GetPath(pathIndex);
+            //Traverse each point within the path
+            foreach (Vector2 point in path)
             {
-                if (point.y >= endY)
+                //Check if end of platform
+                if (point.x >= maxX)
                 {
-                    endY = point.y;
+                    //Check for maxY
+                    if (point.y >= endY)
+                    {
+                        endY = point.y;
+                    }
                 }
             }
         }
