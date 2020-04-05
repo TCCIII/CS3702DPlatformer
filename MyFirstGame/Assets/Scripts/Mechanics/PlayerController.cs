@@ -36,6 +36,7 @@ namespace Platformer.Mechanics
 
         bool jump;
         Vector2 move;
+        bool moveForward;
         SpriteRenderer spriteRenderer;
         internal Animator animator;
         readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();
@@ -119,10 +120,23 @@ namespace Platformer.Mechanics
             }
 
             if (move.x > 0.01f)
-                spriteRenderer.flipX = false;
+            {
+                //spriteRenderer.flipX = false;
+                if (moveForward)
+                {
+                    transform.Rotate(0f, 180f, 0f);
+                }
+                moveForward = false;
+            }
             else if (move.x < -0.01f)
-                spriteRenderer.flipX = true;
-
+            {
+                //spriteRenderer.flipX = true;
+                if (!moveForward)
+                {
+                    transform.Rotate(0f, 180f, 0f);
+                }
+                moveForward = true;
+            }
             animator.SetBool("grounded", IsGrounded);
             animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 

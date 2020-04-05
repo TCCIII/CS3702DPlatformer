@@ -2,9 +2,6 @@ using Platformer.Core;
 using Platformer.Mechanics;
 
 namespace Platformer.Gameplay
-
-
-
 {
     /// <summary>
     /// Fired when the health component on an enemy has a hitpoint value of  0.
@@ -16,11 +13,11 @@ namespace Platformer.Gameplay
 
         public override void Execute()
         {
-            enemy2._collider2.enabled = false;
-            enemy2.control2.enabled = false;
+            enemy2._collider.enabled = false;
+            enemy2.control.enabled = false;
 
-            if (enemy2._audio2 && enemy2.ouch2)
-                enemy2._audio2.PlayOneShot(enemy2.ouch2);
+            if (enemy2._audio && enemy2.ouch)
+                enemy2._audio.PlayOneShot(enemy2.ouch);
         }
     }
 }

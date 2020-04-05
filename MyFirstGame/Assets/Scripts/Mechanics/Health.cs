@@ -67,7 +67,8 @@ namespace Platformer.Mechanics
 
         public int GetHealth()
         {
-            return currentHP;
+            ScoreManager.instance.SetScore(2);
+            return 5;
         }
     }
 }

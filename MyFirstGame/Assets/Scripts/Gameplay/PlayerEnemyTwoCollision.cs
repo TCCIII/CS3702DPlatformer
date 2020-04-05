@@ -1,40 +1,36 @@
 using Platformer.Core;
 using Platformer.Mechanics;
 using Platformer.Model;
-using static Platformer.Core.Simulation;
 using UnityEngine;
+using static Platformer.Core.Simulation;
+
 namespace Platformer.Gameplay
 {
 
     /// <summary>
     /// Fired when a Player collides with an Enemy.
     /// </summary>
-    /// <typeparam name="EnemyTwoCollision"></typeparam>
-    public class PlayerEnemyTwoCollision : Simulation.Event<PlayerEnemyTwoCollision>
+    /// <typeparam name="EnemyCollision"></typeparam>
+    public class PlayerEnemyTwoCollision : Simulation.Event<PlayerEnemyCollision>
     {
-        public EnemyTwoController enemy2;
+        public EnemyTwoController enemy;
         public PlayerController player;
 
-        public PlatformerModel Model = Simulation.GetModel<PlatformerModel>();
-
-
-
-
-
+        PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         public override void Execute()
         {
-            var willHurtEnemyTwo = player.Bounds.center.y >= enemy2.Bounds.max.y;
+            var willHurtEnemy = player.Bounds.center.y >= enemy.Bounds.max.y;
 
-            if (willHurtEnemyTwo)
+            if (willHurtEnemy)
             {
-                var enemyHealthTwo = enemy2.GetComponent<Health>();
-                if (enemyHealthTwo != null)
+                var enemyHealth = enemy.GetComponent<Health>();
+                if (enemyHealth != null)
                 {
-                    enemyHealthTwo.Decrement();
-                    if (!enemyHealthTwo.IsAlive)
+                    enemyHealth.Decrement();
+                    if (!enemyHealth.IsAlive)
                     {
-                        Schedule<EnemyTwoDeath>().enemy2 = enemy2;
+                        Schedule<EnemyTwoDeath>().enemy2 = enemy;
                         player.Bounce(2);
                     }
                     else
@@ -44,7 +40,7 @@ namespace Platformer.Gameplay
                 }
                 else
                 {
-                    Schedule<EnemyTwoDeath>().enemy2 = enemy2;
+                    Schedule<EnemyTwoDeath>().enemy2 = enemy;
                     player.Bounce(2);
                 }
             }
@@ -55,7 +51,3 @@ namespace Platformer.Gameplay
         }
     }
 }
-
-
-
-
