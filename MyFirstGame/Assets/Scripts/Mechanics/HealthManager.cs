@@ -12,7 +12,7 @@ namespace Platformer.Mechanics
     {
         public static HealthManager instance;
         public TextMeshProUGUI text;
-        public int health;
+        public static int health;
 
         PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
@@ -27,19 +27,14 @@ namespace Platformer.Mechanics
 
         public void GetHealth()
         {
-            ScoreManager.instance.SetScore(11);
             var player = model.player;
-
-            health = model.player.health.GetHealth();
+            health = player.health.GetHealth();
             text.text = "Health: " + health.ToString();
-
-            ScoreManager.instance.SetScore(health);
         }
 
         public void GetHealth(int value)
         {
             text.text = "Health: " + value.ToString();
-            ScoreManager.instance.SetScore(model.player.health.GetHealth());
         }
     }
 }

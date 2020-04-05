@@ -570,3 +570,6 @@ D:\Users\TCCIII\UnityProjects\CS370 2D Platformer\obj\Debug\Assembly-CSharp-Edit
 D:\Users\TCCIII\UnityProjects\CS370 2D Platformer\obj\Debug\Assembly-CSharp-Editor.csproj.CopyComplete
 D:\Users\TCCIII\UnityProjects\CS370 2D Platformer\obj\Debug\Assembly-CSharp-Editor.dll
 D:\Users\TCCIII\UnityProjects\CS370 2D Platformer\obj\Debug\Assembly-CSharp-Editor.pdb
+D:\Documents\GitHub\CS3702DPlatformer\MyFirstGame\obj\Debug\Assembly-CSharp-Editor.csprojAssemblyReference.cache
+D:\Documents\GitHub\CS3702DPlatformer\MyFirstGame\obj\Debug\Assembly-CSharp-Editor.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\CS3702DPlatformer\MyFirstGame\obj\Debug\Assembly-CSharp-Editor.dll

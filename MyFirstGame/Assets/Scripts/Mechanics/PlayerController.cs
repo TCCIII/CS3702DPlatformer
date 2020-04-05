@@ -17,7 +17,7 @@ namespace Platformer.Mechanics
         public AudioClip jumpAudio;
         public AudioClip respawnAudio;
         public AudioClip ouchAudio;
-
+        public bool moveFoward;
         /// <summary>
         /// Max horizontal speed of the player.
         /// </summary>
@@ -36,7 +36,6 @@ namespace Platformer.Mechanics
 
         bool jump;
         Vector2 move;
-        bool moveForward;
         SpriteRenderer spriteRenderer;
         internal Animator animator;
         readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();
@@ -121,22 +120,21 @@ namespace Platformer.Mechanics
 
             if (move.x > 0.01f)
             {
-                if (moveForward)
+                if (moveFoward)
                 {
-                    //spriteRenderer.flipX = false;
                     transform.Rotate(0f, 180f, 0f);
                 }
-                moveForward = false;
+                moveFoward = false;
             }
             else if (move.x < -0.01f)
             {
-                if (!moveForward)
+                if(!moveFoward)
                 {
-                    //spriteRenderer.flipX = true;
                     transform.Rotate(0f, 180f, 0f);
                 }
-                moveForward = true;
+                moveFoward = true;
             }
+
             animator.SetBool("grounded", IsGrounded);
             animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 
