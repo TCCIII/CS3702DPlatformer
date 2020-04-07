@@ -41,7 +41,7 @@ Tilemap:
   m_GameObject: {fileID: 2293106502183253142}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 2, y: 1, z: 0}
+  - first: {x: 1, y: 0, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 1
@@ -180,8 +180,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5812986607883675799}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: -10, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: 2, y: -20, z: 0}
+  m_LocalScale: {x: 0.1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 7235660066463019641}
   m_RootOrder: 1
@@ -326,7 +326,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.7, y: 1.3}
-      - {x: 2.3, y: 1.3}
-      - {x: 2.3, y: 1.7}
-      - {x: 2.7, y: 1.7}
+    - - {x: 1.7, y: 0.3}
+      - {x: 1.3, y: 0.3}
+      - {x: 1.3, y: 0.7}
+      - {x: 1.7, y: 0.7}
+    - - {x: 3, y: 1}

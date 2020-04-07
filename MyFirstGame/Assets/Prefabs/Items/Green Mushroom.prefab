@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 182630721690921238}
   - component: {fileID: 182630721690921235}
   - component: {fileID: 182630721690921236}
-  - component: {fileID: 182630721690921237}
   - component: {fileID: 182630721690921234}
+  - component: {fileID: 8953957869612656530}
   m_Layer: 0
   m_Name: Green Mushroom
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182630721690921239}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.6, y: -7.969, z: -0.16508554}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.104795545, y: 0.09390892, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -48,6 +48,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -59,6 +60,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -98,23 +100,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 1.5200603}
   serializedVersion: 2
   m_Radius: 2.5328507
---- !u!114 &182630721690921237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 182630721690921239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b097985de22ad845aeb1c8e87346dac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  greenMushCollectAudio: {fileID: 8300000, guid: 93fbb109633e844259ea828442bda0cb,
-    type: 3}
-  randomAnimationStartTime: 0
-  idleAnimation: []
-  collectedAnimation: []
 --- !u!114 &182630721690921234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,3 +114,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1536223261001531947, guid: 1934681f4c98340459afd0a169e60cc4,
     type: 3}
+--- !u!114 &8953957869612656530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182630721690921239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba95bd61eb455104ca4120c58c293b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  greenMushCollectAudio: {fileID: 8300000, guid: bf527d825758e5b4ca7b69f5a02d9a56,
+    type: 3}
+  randomAnimationStartTime: 0
+  idleAnimation: []
+  collectedAnimation: []
