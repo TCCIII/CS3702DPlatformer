@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 464035940140966684}
   - component: {fileID: 6516561632952967679}
   - component: {fileID: 7771642442384629956}
-  - component: {fileID: 114786264424408880}
+  - component: {fileID: 9106835173650814532}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -48,6 +48,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -59,6 +60,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -116,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.032354593, y: -0.06470609}
+  m_Offset: {x: -1.6717935, y: -0.06470585}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -127,9 +129,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8587863, y: 13.823507}
+  m_Size: {x: 13.730649, y: 13.823507}
   m_EdgeRadius: 0
---- !u!114 &114786264424408880
+--- !u!114 &9106835173650814532
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,7 +140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 765381665332386297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1f687aac2ba9a43911dcd96850ba04, type: 3}
+  m_Script: {fileID: 11500000, guid: d8389ce3da7fccc4f90bc6056a4a0e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
