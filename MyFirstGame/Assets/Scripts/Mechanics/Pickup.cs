@@ -20,11 +20,12 @@ public class Pickup : MonoBehaviour
             {
                 if(inventory.isFull[i] ==  false)
                 {
+                    gameObject.GetComponent<AbilityHandler>().Add();
                     //Add it
                     inventory.isFull[i] = true;
                     Instantiate(itemButton, inventory.slots[i].transform, false);
                     Destroy(gameObject);
-                    break;
+                    return;
                 }
             }
         }

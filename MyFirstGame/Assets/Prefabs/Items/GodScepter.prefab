@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2552336062029848121}
   - component: {fileID: 5477439547022979872}
   - component: {fileID: 8193638114903002783}
+  - component: {fileID: 6016905686531305325}
   m_Layer: 0
   m_Name: GodScepter
   m_TagString: Untagged
@@ -130,3 +131,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 2046081621349134177, guid: 6d759f98d9e75154b8dd7b5c4eb08450,
     type: 3}
+--- !u!114 &6016905686531305325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8686724875461901575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e31bb54dc24fa4991972194a3aa6b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemInstance:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5477439547022979872}
+        m_MethodName: AddAbility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

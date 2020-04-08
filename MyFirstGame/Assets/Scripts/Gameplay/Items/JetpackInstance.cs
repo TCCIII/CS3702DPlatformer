@@ -1,7 +1,5 @@
-﻿using Platformer.Gameplay;
-using UnityEngine;
+﻿using UnityEngine;
 using Platformer.Model;
-using static Platformer.Core.Simulation;
 
 namespace Platformer.Mechanics
 {
@@ -32,31 +30,14 @@ namespace Platformer.Mechanics
             sprites = idleAnimation;
         }
 
-        void OnTriggerEnter2D(Collider2D other)
+        public void AddAbility()
         {
-            //only exectue OnPlayerEnter if the player collides with this item.
-            var player = other.gameObject.GetComponent<PlayerController>();
-            if (player != null) OnPlayerEnter(player);
-
-            if (other.gameObject.tag == "Player")
-            {
-                //Destroy(gameObject);
-            }
+            model.jumpModifier = model.jumpModifier + 0.3f;
         }
 
-        void OnPlayerEnter(PlayerController player)
+        public void RemoveAbility()
         {
-            if (collected) return;
-            //disable the gameObject and remove it from the controller update list.
-            frame = 0;
-            sprites = collectedAnimation;
-            if (controller != null)
-                collected = true;
-            //send an event into the gameplay system to perform some behaviour.
-            var ev = Schedule<PlayerJetpackCollision>();
-            ev.jetPack = this;
-            ev.player = player;
-            model.jumpModifier = 1.3f;
+            model.jumpModifier = model.jumpModifier - 0.3f;
         }
     }
 }

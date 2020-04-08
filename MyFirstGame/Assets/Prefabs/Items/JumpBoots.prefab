@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 268367535045293280}
   - component: {fileID: 268367535045293295}
   - component: {fileID: 268367535045293283}
+  - component: {fileID: 330318579066304565}
   m_Layer: 0
   m_Name: JumpBoots
   m_TagString: Untagged
@@ -131,3 +132,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1358765901284115943, guid: 2afdb5b947b7a6a45831d8390d634f34,
     type: 3}
+--- !u!114 &330318579066304565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268367535045293294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e31bb54dc24fa4991972194a3aa6b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemInstance:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 268367535045293295}
+        m_MethodName: AddAbility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

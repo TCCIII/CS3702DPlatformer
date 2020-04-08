@@ -9,6 +9,7 @@ namespace Platformer.Mechanics
     [RequireComponent(typeof(Collider2D))]
     public class SpeedPotionInstance : MonoBehaviour
     {
+        readonly PlatformerModel model = Core.Simulation.GetModel<PlatformerModel>();
         public AudioClip speedPotionCollectAudio;
         [Tooltip("If true, animation will start at a random position in the sequence.")]
         public bool randomAnimationStartTime = false;
@@ -32,31 +33,14 @@ namespace Platformer.Mechanics
             sprites = idleAnimation;
         }
 
-        void OnTriggerEnter2D(Collider2D other)
+        public void AddAbility()
         {
-            //only exectue OnPlayerEnter if the player collides with this item.
-            var player = other.gameObject.GetComponent<PlayerController>();
-            if (player != null) OnPlayerEnter(player);
-
-            if (other.gameObject.tag == "Player")
-            {
-                //Destroy(gameObject);
-            }
+            model.player.maxSpeed = model.player.maxSpeed + 2;
         }
 
-        void OnPlayerEnter(PlayerController player)
+        public void RemoveAbility()
         {
-            if (collected) return;
-            //disable the gameObject and remove it from the controller update list.
-            frame = 0;
-            sprites = collectedAnimation;
-            if (controller != null)
-                collected = true;
-            //send an event into the gameplay system to perform some behaviour.
-            var ev = Schedule<PlayerSpeedPotionCollision>();
-            ev.speedPotion = this;
-            ev.player = player;
-            player.maxSpeed = 8;
+            model.player.maxSpeed = model.player.maxSpeed - 2;
         }
     }
 }

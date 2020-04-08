@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1358765901284114970}
   - component: {fileID: 1358765901284115941}
   - component: {fileID: 114956057295676328}
+  - component: {fileID: 876275539311363050}
   m_Layer: 5
   m_Name: JumpBoots Button
   m_TagString: Untagged
@@ -55,7 +56,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1358765901284115943}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -73,6 +74,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &114956057295676328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,3 +88,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 268367535045293294, guid: 5f490ada256d8c64e85d8357cc414ec1, type: 3}
+--- !u!114 &876275539311363050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358765901284115943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e31bb54dc24fa4991972194a3aa6b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemInstance:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 268367535045293295, guid: 5f490ada256d8c64e85d8357cc414ec1,
+          type: 3}
+        m_MethodName: RemoveAbility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

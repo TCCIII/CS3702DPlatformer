@@ -35,37 +35,32 @@ namespace Platformer.Mechanics
             sprites = idleAnimation;
         }
 
-        void OnTriggerEnter2D(Collider2D other)
+        public void AddAbility()
         {
-            //only exectue OnPlayerEnter if the player collides with this item.
-            var player = other.gameObject.GetComponent<PlayerController>();
-            if (player != null) OnPlayerEnter(player);
-
-            if (other.gameObject.tag == "Player")
+            model.player.maxSpeed = model.player.maxSpeed + 1;
+            model.jumpModifier = model.jumpModifier + 0.2f;
+            if (currentHP > 2)
             {
-                //Destroy(gameObject);
+                currentHP = currentHP - 2;
             }
+            else
+            {
+                currentHP = 1;
+            }
+            HealthManager.instance.GetHealth();
+            model.player.jumpTakeOffSpeed = model.player.jumpTakeOffSpeed + 1;
         }
 
-        void OnPlayerEnter(PlayerController player)
+        public void RemoveAbility()
         {
-            if (collected) return;
-            //disable the gameObject and remove it from the controller update list.
-            frame = 0;
-            sprites = collectedAnimation;
-            if (controller != null)
-                collected = true;
-            //send an event into the gameplay system to perform some behaviour.
-            var ev = Schedule<PlayerGodScepCollision>();
-            ev.GodScept = this;
-            ev.player = player;
-            player.maxSpeed = 8;
-            model.jumpModifier = 1.4f;
-            maxHP = 5;
-            currentHP = 1;
+            model.player.maxSpeed = model.player.maxSpeed - 1;
+            model.jumpModifier = model.jumpModifier - 0.2f;
+
+            //Need to check multiple scepters!!
+            currentHP = currentHP + 2;
+
             HealthManager.instance.GetHealth();
-            player.health.Increment();
-            player.jumpTakeOffSpeed = 11;
+            model.player.jumpTakeOffSpeed = model.player.jumpTakeOffSpeed - 1;
         }
     }
 }
