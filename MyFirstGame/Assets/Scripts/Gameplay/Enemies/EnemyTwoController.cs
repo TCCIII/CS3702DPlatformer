@@ -9,28 +9,28 @@ namespace Platformer.Mechanics
     /// <summary>
     /// A simple controller for enemies. Provides movement control over a patrol path.
     /// </summary>
-    [RequireComponent(typeof(AnimationController), typeof(Collider2D))]
+    [RequireComponent(typeof(AnimationTwoController), typeof(Collider2D))]
     public class EnemyTwoController : MonoBehaviour
     {
-        public PatrolPath path;
-        public AudioClip ouch;
+        public PatrolPath path2;
+        public AudioClip ouch2;
 
-        internal PatrolPath.Mover mover;
-        internal AnimationController control;
-        internal Collider2D _collider;
-        internal AudioSource _audio;
-        SpriteRenderer spriteRenderer;
+        internal PatrolPath.Mover mover2;
+        internal AnimationTwoController control2;
+        internal Collider2D _collider2;
+        internal AudioSource _audio2;
+        internal SpriteRenderer _spriteRenderer2;
 
-        private bool invincible = false;
+        private bool invincible2 = false;
 
-        public Bounds Bounds => _collider.bounds;
+        public Bounds Bounds => _collider2.bounds;
 
         void Awake()
         {
-            control = GetComponent<AnimationController>();
-            _collider = GetComponent<Collider2D>();
-            _audio = GetComponent<AudioSource>();
-            spriteRenderer = GetComponent<SpriteRenderer>();
+            control2 = GetComponent<AnimationTwoController>();
+            _collider2 = GetComponent<Collider2D>();
+            _audio2 = GetComponent<AudioSource>();
+            _spriteRenderer2 = GetComponent<SpriteRenderer>();
         }
 
         void OnCollisionEnter2D(Collision2D collision)
@@ -38,30 +38,39 @@ namespace Platformer.Mechanics
             var player = collision.gameObject.GetComponent<PlayerController>();
             if (player != null)
             {
-                if (!invincible)
+                if (!invincible2)
                 {
                     var ev = Schedule<PlayerEnemyTwoCollision>();
                     ev.player = player;
-                    ev.enemy = this;
-                    Destroy(gameObject);
+                    ev.enemy2 = this;
                 }
-                
+
             }
         }
 
         void Update()
         {
-            if (path != null)
+            if (path2 != null)
             {
-                if (mover == null) mover = path.CreateMover(control.maxSpeed * 0.5f);
-                control.move.x = Mathf.Clamp(mover.Position.x - transform.position.x, -1, 1);
+                if (mover2 == null) mover2 = path2.CreateMover(control2.maxSpeed2 * 0.5f);
+                control2.move2.x = Mathf.Clamp(mover2.Position.x - transform.position.x, -1, 1);
             }
         }
 
-        IEnumerator Invulnerability()
+        public IEnumerator Invulnerability2()
         {
+
             yield return new WaitForSecondsRealtime(3);
-            invincible = false;
+            invincible2 = false;
         }
     }
 }
+
+
+
+
+
+
+
+
+

@@ -11,26 +11,26 @@ namespace Platformer.Gameplay
     /// Fired when a Player collides with an Enemy.
     /// </summary>
     /// <typeparam name="EnemyCollision"></typeparam>
-    public class PlayerEnemyTwoCollision : Simulation.Event<PlayerEnemyCollision>
+    public class PlayerEnemyTwoCollision : Simulation.Event<PlayerEnemyTwoCollision>
     {
-        public EnemyTwoController enemy;
+        public EnemyTwoController enemy2;
         public PlayerController player;
 
-        PlatformerModel model = Simulation.GetModel<PlatformerModel>();
-
+        public PlatformerModel model = Simulation.GetModel<PlatformerModel>();
+       
         public override void Execute()
         {
-            var willHurtEnemy = player.Bounds.center.y >= enemy.Bounds.max.y;
+            var willHurtEnemy = player.Bounds.center.y >= enemy2.Bounds.max.y;
 
             if (willHurtEnemy)
             {
-                var enemyHealth = enemy.GetComponent<Health>();
+                var enemyHealth = enemy2.GetComponent<Health>();
                 if (enemyHealth != null)
                 {
                     enemyHealth.Decrement();
                     if (!enemyHealth.IsAlive)
                     {
-                        Schedule<EnemyTwoDeath>().enemy2 = enemy;
+                        Schedule<EnemyTwoDeath>().enemy2 = enemy2;
                         player.Bounce(2);
                     }
                     else
@@ -40,7 +40,7 @@ namespace Platformer.Gameplay
                 }
                 else
                 {
-                    Schedule<EnemyTwoDeath>().enemy2 = enemy;
+                    Schedule<EnemyTwoDeath>().enemy2 = enemy2;
                     player.Bounce(2);
                 }
             }
