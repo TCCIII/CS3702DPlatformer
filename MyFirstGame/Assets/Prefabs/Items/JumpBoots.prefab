@@ -113,8 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5414be2f68aab942acc1ae918eca8c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpBootsCollectAudio: {fileID: 8300000, guid: bf527d825758e5b4ca7b69f5a02d9a56,
-    type: 3}
+  jumpBootsCollectAudio: {fileID: 0}
   randomAnimationStartTime: 0
   idleAnimation: []
   collectedAnimation: []
