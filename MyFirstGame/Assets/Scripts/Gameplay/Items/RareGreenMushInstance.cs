@@ -37,6 +37,7 @@ namespace Platformer.Mechanics
 
         public void AddAbility()
         {
+            ItemDescriptionManager.instance.Clear();
             maxHP = maxHP + 2;
             currentHP = currentHP + 2;
             model.player.maxSpeed = model.player.maxSpeed - 1;
@@ -57,6 +58,12 @@ namespace Platformer.Mechanics
             }
             model.player.maxSpeed = model.player.maxSpeed + 1;
             HealthManager.instance.GetHealth();
+        }
+
+        public void Description()
+        {
+            string text = "+2 Health, -1 Speed";
+            ItemDescriptionManager.instance.Description(text);
         }
     }
 }

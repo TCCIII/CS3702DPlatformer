@@ -32,12 +32,19 @@ namespace Platformer.Mechanics
 
         public void AddAbility()
         {
+            ItemDescriptionManager.instance.Clear();
             model.jumpModifier = model.jumpModifier + 0.3f;
         }
 
         public void RemoveAbility()
         {
             model.jumpModifier = model.jumpModifier - 0.3f;
+        }
+
+        public void Description()
+        {
+            string text = "Decreases gravity of player";
+            ItemDescriptionManager.instance.Description(text);
         }
     }
 }

@@ -787,3 +787,7 @@ D:\Users\TCCIII\UnityProjects\CS370 2D Platformer\obj\Debug\Assembly-CSharp.pdb
 D:\Documents\GitHub\CS3702DPlatformer\MyFirstGame\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
 D:\Documents\GitHub\CS3702DPlatformer\MyFirstGame\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
 D:\Documents\GitHub\CS3702DPlatformer\MyFirstGame\obj\Debug\Assembly-CSharp.dll
+D:\Users\TCCIII\UnityProjects\2D Platformer V3.2\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\Users\TCCIII\UnityProjects\2D Platformer V3.2\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+D:\Users\TCCIII\UnityProjects\2D Platformer V3.2\obj\Debug\Assembly-CSharp.dll
+D:\Users\TCCIII\UnityProjects\2D Platformer V3.2\obj\Debug\Assembly-CSharp.pdb

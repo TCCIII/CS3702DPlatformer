@@ -37,6 +37,7 @@ namespace Platformer.Mechanics
 
         public void AddAbility()
         {
+            ItemDescriptionManager.instance.Clear();
             maxHP = maxHP + 1;
             currentHP = currentHP + 1;
             HealthManager.instance.GetHealth();
@@ -50,6 +51,12 @@ namespace Platformer.Mechanics
                 currentHP = currentHP - 1;
             }
             HealthManager.instance.GetHealth();
+        }
+
+        public void Description()
+        {
+            string text = "+1 Health";
+            ItemDescriptionManager.instance.Description(text);
         }
     }
 }

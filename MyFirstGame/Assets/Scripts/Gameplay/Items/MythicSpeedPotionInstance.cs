@@ -35,6 +35,7 @@ namespace Platformer.Mechanics
 
         public void AddAbility()
         {
+            ItemDescriptionManager.instance.Clear();
             model.player.maxSpeed = model.player.maxSpeed + 4;
             model.player.jumpTakeOffSpeed = model.player.jumpTakeOffSpeed - 1;
         }
@@ -43,6 +44,12 @@ namespace Platformer.Mechanics
         {
             model.player.maxSpeed = model.player.maxSpeed - 4;
             model.player.jumpTakeOffSpeed = model.player.jumpTakeOffSpeed + 1;
+        }
+
+        public void Description()
+        {
+            string text = "+4 Speed, -1 Jump";
+            ItemDescriptionManager.instance.Description(text);
         }
     }
 }

@@ -35,12 +35,19 @@ namespace Platformer.Mechanics
 
         public void AddAbility()
         {
+            ItemDescriptionManager.instance.Clear();
             Coin.coinValue = Coin.coinValue + 1;
         }
 
         public void RemoveAbility()
         {
             Coin.coinValue = Coin.coinValue - 1;
+        }
+
+        public void Description()
+        {
+            string text = "+1 Coin Value";
+            ItemDescriptionManager.instance.Description(text);
         }
     }
 }

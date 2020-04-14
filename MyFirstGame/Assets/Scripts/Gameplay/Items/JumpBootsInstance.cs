@@ -42,12 +42,19 @@ namespace Platformer.Mechanics
 
         public void AddAbility()
         {
+            ItemDescriptionManager.instance.Clear();
             model.player.jumpTakeOffSpeed = model.player.jumpTakeOffSpeed + 2;
         }
 
         public void RemoveAbility()
         {
             model.player.jumpTakeOffSpeed = model.player.jumpTakeOffSpeed - 2;
+        }
+
+        public void Description()
+        {
+            string text = "+2 Jump";
+            ItemDescriptionManager.instance.Description(text);
         }
     }
 }

@@ -35,12 +35,19 @@ namespace Platformer.Mechanics
 
         public void AddAbility()
         {
+            ItemDescriptionManager.instance.Clear();
             model.player.maxSpeed = model.player.maxSpeed + 2;
         }
 
         public void RemoveAbility()
         {
             model.player.maxSpeed = model.player.maxSpeed - 2;
+        }
+
+        public void Description()
+        {
+            string text = "+2 Speed";
+            ItemDescriptionManager.instance.Description(text);
         }
     }
 }

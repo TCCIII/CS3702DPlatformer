@@ -37,6 +37,7 @@ namespace Platformer.Mechanics
 
         public void AddAbility()
         {
+            ItemDescriptionManager.instance.Clear();
             model.player.maxSpeed = model.player.maxSpeed + 1;
             model.jumpModifier = model.jumpModifier + 0.2f;
             if (currentHP > 2)
@@ -61,6 +62,12 @@ namespace Platformer.Mechanics
 
             HealthManager.instance.GetHealth();
             model.player.jumpTakeOffSpeed = model.player.jumpTakeOffSpeed - 1;
+        }
+
+        public void Description()
+        {
+            string text = "+1 Speed, +1 Jump, Jetpack, -2 Health";
+            ItemDescriptionManager.instance.Description(text);
         }
     }
 }
