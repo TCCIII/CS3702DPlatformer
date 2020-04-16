@@ -7,6 +7,7 @@ public class Platformgenerator : MonoBehaviour
     public GameObject[] spawnPlatforms;
     public GameObject currentPlatform;
     public GameObject nextPlatform;
+    public GameObject itemStore;
     int index;
 
     public Transform generationPoint;
@@ -14,6 +15,8 @@ public class Platformgenerator : MonoBehaviour
 
     private float platformWidth;
     private float platformHeight;
+
+    public int count;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,9 @@ public class Platformgenerator : MonoBehaviour
         //Starting Position
         platformWidth = 0;
         platformHeight = 0;
+
+        //Keep Track of platforms created
+        count = 1;
     }
 
     // Update is called once per frame
@@ -35,20 +41,33 @@ public class Platformgenerator : MonoBehaviour
     {
         if(transform.position.x < generationPoint.position.x)
         {
-            //Generate next platform
-            transform.position = new Vector3(transform.position.x + platformWidth + distancebetween, transform.position.y + platformHeight, transform.position.z);
-            Instantiate(nextPlatform, transform.position, transform.rotation);
-            
-            //Get current platform
-            currentPlatform = nextPlatform;
-            
-            //Get Height and Width of current platform
-            platformWidth = GetPlatformWidth(currentPlatform.GetComponent<PolygonCollider2D>());
-            platformHeight = GetPlatformHeight(currentPlatform.GetComponent<PolygonCollider2D>());
+            if (count % 10 == 0)
+            {
+                //Generate item store
+                transform.position = new Vector3(transform.position.x + platformWidth + distancebetween, transform.position.y + platformHeight, transform.position.z);
+                Instantiate(itemStore, transform.position, transform.rotation);
 
-            //Create next platform
-            index = Random.Range(0, spawnPlatforms.Length);
-            nextPlatform = spawnPlatforms[index];
+                //Get Height and Width of current platform
+                platformWidth = GetPlatformWidth(itemStore.GetComponent<PolygonCollider2D>());
+                platformHeight = GetPlatformHeight(itemStore.GetComponent<PolygonCollider2D>());
+            } else
+            {
+                //Generate next platform
+                transform.position = new Vector3(transform.position.x + platformWidth + distancebetween, transform.position.y + platformHeight, transform.position.z);
+                Instantiate(nextPlatform, transform.position, transform.rotation);
+
+                //Get current platform
+                currentPlatform = nextPlatform;
+
+                //Get Height and Width of current platform
+                platformWidth = GetPlatformWidth(currentPlatform.GetComponent<PolygonCollider2D>());
+                platformHeight = GetPlatformHeight(currentPlatform.GetComponent<PolygonCollider2D>());
+
+                //Create next platform
+                index = Random.Range(0, spawnPlatforms.Length);
+                nextPlatform = spawnPlatforms[index];
+            }
+            count++;
         }
         
     }
