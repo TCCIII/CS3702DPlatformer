@@ -8,6 +8,7 @@ TagManager:
   - platform
   - Enemy
   - ItemStore
+  - wall
   layers:
   - Default
   - TransparentFX

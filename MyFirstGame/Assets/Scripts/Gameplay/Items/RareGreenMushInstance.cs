@@ -23,7 +23,6 @@ namespace Platformer.Mechanics
         internal SpriteRenderer _renderer;
 
         internal int greenMushIndex = -1;
-        internal GreenMushController controller;
         internal int frame = 0;
         internal bool collected = false;
 

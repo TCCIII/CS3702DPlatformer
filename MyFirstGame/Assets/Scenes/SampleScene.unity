@@ -1340,7 +1340,7 @@ GameObject:
   - component: {fileID: 384263216}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7851,7 +7851,7 @@ PrefabInstance:
     - target: {fileID: 7256409988804958789, guid: d0749eacaafe29b4e8bd539ca87c8ab5,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0749eacaafe29b4e8bd539ca87c8ab5, type: 3}
@@ -13490,7 +13490,7 @@ PrefabInstance:
     - target: {fileID: 7379939105005635029, guid: 40889ef0e582a4448ac27e548718dd17,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40889ef0e582a4448ac27e548718dd17, type: 3}
