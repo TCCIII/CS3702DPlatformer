@@ -36,6 +36,7 @@ namespace Platformer.Mechanics
 
         bool jump;
         Vector2 move;
+        Vector2 drop;
         SpriteRenderer spriteRenderer;
         internal Animator animator;
         readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();
@@ -94,6 +95,10 @@ namespace Platformer.Mechanics
                     {
                         Schedule<PlayerLanded>().player = this;
                         jumpState = JumpState.Landed;
+                    }
+                    else if (Input.GetAxis("Vertical") < 0)
+                    {
+                        velocity.y -= 0.1f;
                     }
                     break;
                 case JumpState.Landed:
