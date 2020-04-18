@@ -620,7 +620,9 @@ MonoBehaviour:
   spawnRooms:
   - {fileID: 6545731723961480951, guid: 3ccae7cd079a7ba49b8a82ada9b26ae9, type: 3}
   - {fileID: 5241210927603576800, guid: f707fc9bdfdde8f4abd155dab11589d6, type: 3}
+  - {fileID: 2086993566547200859, guid: d6c149f0d11d13c4da9ce491d1d14791, type: 3}
   - {fileID: 1962111663654193724, guid: c656bc6b88126f34b943e696a1a1d25f, type: 3}
+  - {fileID: 2289357097070701623, guid: e82ebae35ac633f4c86ec4f965364c38, type: 3}
   currentRoom: {fileID: 0}
   nextRoom: {fileID: 0}
   itemStore: {fileID: 3782764359664108917, guid: 2d33c940ff91ad34c86a9de304c4ac0f,
@@ -8465,7 +8467,7 @@ MonoBehaviour:
     player: {fileID: 901833543}
     spawnPoint: {fileID: 421228357}
     jumpModifier: 1
-    jumpDeceleration: 0.3
+    jumpDeceleration: 0.2
 --- !u!4 &1754240608
 Transform:
   m_ObjectHideFlags: 0

@@ -47,9 +47,6 @@ MonoBehaviour:
   - {fileID: 6023876439513847754, guid: e7f925a5a1bfba4419cd9744587eb42b, type: 3}
   - {fileID: 7256409988804958789, guid: d0749eacaafe29b4e8bd539ca87c8ab5, type: 3}
   - {fileID: 7379939105005635029, guid: 40889ef0e582a4448ac27e548718dd17, type: 3}
-  currentPlatform: {fileID: 6023876439513847754, guid: e7f925a5a1bfba4419cd9744587eb42b,
-    type: 3}
-  nextPlatform: {fileID: 6023876439513847754, guid: e7f925a5a1bfba4419cd9744587eb42b,
-    type: 3}
-  generationPoint: {fileID: 0}
+  currentPlatform: {fileID: 0}
+  nextPlatform: {fileID: 0}
   distancebetween: 0
