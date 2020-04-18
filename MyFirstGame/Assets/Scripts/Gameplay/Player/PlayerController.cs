@@ -122,7 +122,7 @@ namespace Platformer.Mechanics
             {
                 if (moveFoward)
                 {
-                    float adjust = 0.1f;
+                    float adjust = 0.2f;
                     transform.position = transform.position + new Vector3(adjust, 0);
                     transform.Rotate(0f, 180f, 0f);
                 }
@@ -132,7 +132,7 @@ namespace Platformer.Mechanics
             {
                 if(!moveFoward)
                 {
-                    float adjust = -0.1f;
+                    float adjust = -0.2f;
                     transform.position = transform.position + new Vector3(adjust, 0);
                     transform.Rotate(0f, 180f, 0f);
                 }

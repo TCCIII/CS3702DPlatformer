@@ -21,7 +21,6 @@ namespace Platformer.Mechanics
         internal SpriteRenderer _renderer;
 
         internal int speedPotionIndex = -1;
-        internal SpeedPotionController controller;
         internal int frame = 0;
         internal bool collected = false;
 

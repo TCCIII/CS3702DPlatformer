@@ -23,7 +23,6 @@ namespace Platformer.Mechanics
         internal SpriteRenderer _renderer;
 
         internal int GodScepIndex = -1;
-        internal GodScepController controller;
         internal int frame = 0;
         internal bool collected = false;
 

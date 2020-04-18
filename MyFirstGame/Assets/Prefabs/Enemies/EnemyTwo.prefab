@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 3581663636964591115}
   - component: {fileID: 3600934914725726329}
   - component: {fileID: 8578412616332587369}
-  - component: {fileID: 2743894407645783389}
   - component: {fileID: 2743894407645783365}
+  - component: {fileID: 9203967026057998337}
   m_Layer: 13
   m_Name: EnemyTwo
   m_TagString: Enemy
@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3531958590195807903}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.639532, y: 0.095155776, z: 2.684803}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -150,7 +150,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3531958590195807903}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -239,7 +239,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2743894407645783389
+--- !u!114 &2743894407645783365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,8 +252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path2: {fileID: 0}
-  ouch2: {fileID: 0}
---- !u!114 &2743894407645783365
+  ouch2: {fileID: 8300000, guid: a418e46d47189404c94a58c6bc0a7241, type: 3}
+--- !u!114 &9203967026057998337
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3531958590195807903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bf4d2f0ea28396448e881a83915ff65, type: 3}
+  m_Script: {fileID: 11500000, guid: 41f9a44db9b4993449f833ff409909a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65

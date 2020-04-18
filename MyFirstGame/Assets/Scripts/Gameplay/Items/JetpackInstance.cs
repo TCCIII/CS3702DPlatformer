@@ -18,7 +18,6 @@ namespace Platformer.Mechanics
         internal SpriteRenderer _renderer;
 
         internal int jetPackIndex = -1;
-        internal JetpackController controller;
         internal int frame = 0;
         internal bool collected = false;
 

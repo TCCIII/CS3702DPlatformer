@@ -21,7 +21,6 @@ namespace Platformer.Mechanics
         internal SpriteRenderer _renderer;
 
         internal int coinDoubIndex = -1;
-        internal CoinDoubleController controller;
         internal int frame = 0;
         internal bool collected = false;
 

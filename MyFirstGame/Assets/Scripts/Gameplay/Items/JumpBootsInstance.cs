@@ -27,7 +27,6 @@ namespace Platformer.Mechanics
 
         //unique index which is assigned by the JumpBootsController in a scene.
         internal int jumpBootsIndex = -1;
-        internal JumpBootsController controller;
         //active frame in animation, updated by the controller.
         internal int frame = 0;
         internal bool collected = false;
@@ -47,7 +46,7 @@ namespace Platformer.Mechanics
         }
 
         public void RemoveAbility()
-        {
+        {   
             model.player.jumpTakeOffSpeed = model.player.jumpTakeOffSpeed - 2;
         }
 
