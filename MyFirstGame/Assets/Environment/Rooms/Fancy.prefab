@@ -45,7 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platforms:
   - {fileID: 2127614574471832288, guid: 614a8b4872bf0064d917ae397fd3dce1, type: 3}
-  - {fileID: 7978050638236366194, guid: fa91240023c01044091c22fe152d658a, type: 3}
-  currentPlatform: {fileID: 0}
-  nextPlatform: {fileID: 0}
+  currentPlatform: {fileID: 2127614574471832288, guid: 614a8b4872bf0064d917ae397fd3dce1,
+    type: 3}
+  nextPlatform: {fileID: 2127614574471832288, guid: 614a8b4872bf0064d917ae397fd3dce1,
+    type: 3}
   distancebetween: 0

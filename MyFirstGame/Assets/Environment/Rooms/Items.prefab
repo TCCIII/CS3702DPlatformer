@@ -44,10 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platforms:
-  - {fileID: 7501133520363942397, guid: 4845067d02c75ae4581c4e00fa4ce10a, type: 3}
-  - {fileID: 965513176289100458, guid: 57a74c105fe452e468855a29ed6d4ccd, type: 3}
-  - {fileID: 1598839418680593176, guid: f86a62d995790d243ac41408af26d805, type: 3}
-  - {fileID: 3672032691614860259, guid: a701022804183ae44b01dbc11f5f3b5c, type: 3}
+  - {fileID: 7501133520363942397, guid: 56f28577e2de9fd409271f397f046122, type: 3}
+  - {fileID: 965513176289100458, guid: 8a28824e6f122c4458f44dbf277f13cc, type: 3}
+  - {fileID: 1598839418680593176, guid: 670e67c2b00edcf4b9a47df90369776b, type: 3}
+  - {fileID: 3672032691614860259, guid: 9761122cc0c3b694cac235005eaf8fcb, type: 3}
   currentPlatform: {fileID: 0}
-  nextPlatform: {fileID: 0}
+  nextPlatform: {fileID: 965513176289100458, guid: 57a74c105fe452e468855a29ed6d4ccd,
+    type: 3}
   distancebetween: 0

@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platforms:
-  - {fileID: 7978050638236366194, guid: fa91240023c01044091c22fe152d658a, type: 3}
-  - {fileID: 317428392971182721, guid: cae2e201c7a963545adaeca0dc9017a6, type: 3}
+  - {fileID: 317428392971182721, guid: 12249c86054b53e47b0c8f93a19b7d55, type: 3}
+  - {fileID: 7978050638236366194, guid: 7c7a4223d202d95469d9a6b505cae896, type: 3}
   - {fileID: 6955920365235472776, guid: 6bff37b3c3b95934d8b364e31ab979f9, type: 3}
   currentPlatform: {fileID: 0}
   nextPlatform: {fileID: 0}
