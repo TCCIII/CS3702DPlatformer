@@ -95,13 +95,11 @@ namespace Platformer.Mechanics
                 case JumpState.InFlight:
                     if (Input.GetButton("Jump") && hasjetpack)
                     {
-                       if(jetpackdur<750)
+                       if(jetpackdur<200)
                        {
                          velocity.y = 4;
                          jetpackdur++;
                        }
-
-
                     }
                     if (IsGrounded)
                     {
