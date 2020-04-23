@@ -26,6 +26,8 @@ namespace Platformer.Mechanics
         /// Initial jump velocity at the start of a jump.
         /// </summary>
         public float jumpTakeOffSpeed = 7;
+        public static bool hasjetpack;
+        public int jetpackdur = 0;
 
         public JumpState jumpState = JumpState.Grounded;
         private bool stopJump;
@@ -91,6 +93,16 @@ namespace Platformer.Mechanics
                     }
                     break;
                 case JumpState.InFlight:
+                    if (Input.GetButton("Jump") && hasjetpack)
+                    {
+                       if(jetpackdur<750)
+                       {
+                         velocity.y = 4;
+                         jetpackdur++;
+                       }
+
+
+                    }
                     if (IsGrounded)
                     {
                         Schedule<PlayerLanded>().player = this;
@@ -103,6 +115,7 @@ namespace Platformer.Mechanics
                     break;
                 case JumpState.Landed:
                     jumpState = JumpState.Grounded;
+                    jetpackdur = 0;
                     break;
             }
         }

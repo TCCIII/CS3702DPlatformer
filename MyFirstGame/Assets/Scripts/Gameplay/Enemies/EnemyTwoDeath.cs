@@ -18,6 +18,12 @@ namespace Platformer.Gameplay
 
             if (enemy2._audio2 && enemy2.ouch2)
                 enemy2._audio2.PlayOneShot(enemy2.ouch2);
+            if (Health.currentHP < Health.maxHP)
+            {
+                Health.currentHP = Health.currentHP + 1;
+                HealthManager.instance.GetHealth();
+
+            }
         }
     }
 }

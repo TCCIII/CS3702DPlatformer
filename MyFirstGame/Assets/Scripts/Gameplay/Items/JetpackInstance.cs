@@ -12,6 +12,7 @@ namespace Platformer.Mechanics
         public bool randomAnimationStartTime = false;
         [Tooltip("List of frames that make up the animation.")]
         public Sprite[] idleAnimation, collectedAnimation;
+        public static bool jetpack;
 
         internal Sprite[] sprites = new Sprite[0];
 
@@ -32,17 +33,17 @@ namespace Platformer.Mechanics
         public void AddAbility()
         {
             ItemDescriptionManager.instance.Clear();
-            model.jumpModifier = model.jumpModifier + 0.3f;
+            PlayerController.hasjetpack = true;
         }
 
         public void RemoveAbility()
         {
-            model.jumpModifier = model.jumpModifier - 0.3f;
+            PlayerController.hasjetpack = false;
         }
 
         public void Description()
         {
-            string text = "Decreases gravity of player";
+            string text = "Allows Player flight for a limited amount of time at the cost of their jump";
             ItemDescriptionManager.instance.Description(text);
         }
     }
