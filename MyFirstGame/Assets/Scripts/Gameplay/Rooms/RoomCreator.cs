@@ -20,7 +20,7 @@ public class RoomCreator : MonoBehaviour
         nextPlatform = platforms[index];
 
         //Starting Position
-        platformWidth = 0;
+        platformWidth = 5;
         platformHeight = 0;
     }
 
@@ -36,7 +36,7 @@ public class RoomCreator : MonoBehaviour
         nextPlatform = platforms[index];
 
         //Starting Position
-        platformWidth = 0;
+        platformWidth = 5;
         platformHeight = 0;
 
         //Spawn 5 Platforms Total

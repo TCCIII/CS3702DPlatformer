@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3727646434793933602}
   - component: {fileID: 807278996141987436}
   m_Layer: 0
-  m_Name: PatrolPath3
+  m_Name: PatrolPath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249486767839657335}
   m_LocalRotation: {x: -0, y: -0, z: 0.0012545064, w: 0.9999992}
-  m_LocalPosition: {x: 10.26, y: -11.62, z: 0}
+  m_LocalPosition: {x: 9.58, y: -11.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 5657168291915089476}
@@ -43,8 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b023ebe508a49c880fc00552f0dfc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPosition: {x: -18.659286, y: 0}
-  endPosition: {x: -5.8569965, y: 0}
+  startPosition: {x: -5.22021, y: 0}
+  endPosition: {x: 6.12761, y: 0}
 --- !u!1 &1308965902368553422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,7 +1601,7 @@ PrefabInstance:
         type: 3}
       propertyPath: path2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 807278996141987436}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e27f899d52890d3409ae99bb06989c25, type: 3}
 --- !u!1 &6603915048973236141 stripped
