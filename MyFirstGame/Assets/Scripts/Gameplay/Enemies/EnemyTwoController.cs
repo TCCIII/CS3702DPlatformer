@@ -20,6 +20,7 @@ namespace Platformer.Mechanics
         internal Collider2D _collider2;
         internal AudioSource _audio2;
         internal SpriteRenderer _spriteRenderer2;
+        public Health health;
 
         private bool invincible2 = false;
 

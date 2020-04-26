@@ -37,10 +37,7 @@ public class EnemyFire : MonoBehaviour
             nextFire = Time.time + fireRate;*/
 
             if (player != null)
-
             {
-
-
                 GameObject sword = (GameObject)Instantiate(EnemySword);
 
                 sword.transform.position = transform.position;
@@ -48,14 +45,9 @@ public class EnemyFire : MonoBehaviour
                 Vector2 direction = player.transform.position - sword.transform.position;
                 nextFire = Time.time + fireRate;
                 sword.GetComponent<EnemySword>().SetDirection(direction);
-
             }
         }
-
-   
     }
-
-
 }
 
 

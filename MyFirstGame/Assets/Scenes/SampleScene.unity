@@ -2120,11 +2120,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model:
-    virtualCamera: {fileID: 0}
-    player: {fileID: 0}
-    spawnPoint: {fileID: 0}
-    jumpModifier: 1.5
-    jumpDeceleration: 0.5
+    virtualCamera: {fileID: 1946717924}
+    player: {fileID: 1545728210}
+    spawnPoint: {fileID: 421228357}
+    jumpModifier: 1
+    jumpDeceleration: 0.2
 --- !u!4 &662683904
 Transform:
   m_ObjectHideFlags: 0
@@ -3768,6 +3768,18 @@ Transform:
   m_Father: {fileID: 406068107}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.14400001}
+--- !u!114 &1545728210 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7133630689545606787, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+    type: 3}
+  m_PrefabInstance: {fileID: 125071885}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c845df5419ee8524da32c193266e3083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1546373192
 GameObject:
   m_ObjectHideFlags: 0
