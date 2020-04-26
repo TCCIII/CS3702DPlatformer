@@ -1,6 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Platformer.Mechanics;
+using Platformer.Gameplay;
 using UnityEngine;
+using Platformer.Core;
+using Platformer.Model;
+using System;
+
 
 public class EnemyFire : MonoBehaviour
 {
@@ -12,6 +18,7 @@ public class EnemyFire : MonoBehaviour
     {
         fireRate = 1f;
         nextFire = Time.time;
+        
     }
 
     // Update is called once per frame
@@ -22,27 +29,33 @@ public class EnemyFire : MonoBehaviour
 
     void CheckIfTimeToFire()
     {
-       if(Time.time > nextFire)
+        GameObject player = GameObject.Find("Player");
+
+       if (Time.time > nextFire)
         {
-            Instantiate(EnemySword, transform.position, Quaternion.identity);
-            nextFire = Time.time + fireRate;
+           /* Instantiate(EnemySword, transform.position, Quaternion.identity);
+            nextFire = Time.time + fireRate;*/
 
-                GameObject player = GameObject.Find("Player");
+            if (player != null)
 
-                if (player != null)
+            {
 
-                {
-                    GameObject sword = (GameObject)Instantiate(EnemySword);
 
-                    sword.transform.position = transform.position;
+                GameObject sword = (GameObject)Instantiate(EnemySword);
 
-                    Vector2 direction = player.transform.position - sword.transform.position;
+                sword.transform.position = transform.position;
 
-                    sword.GetComponent<EnemySword>().SetDirection(direction);
+                Vector2 direction = player.transform.position - sword.transform.position;
+                nextFire = Time.time + fireRate;
+                sword.GetComponent<EnemySword>().SetDirection(direction);
 
-                }
             }
-
         }
+
+   
     }
+
+
+}
+
 
