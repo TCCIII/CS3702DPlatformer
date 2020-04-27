@@ -22,8 +22,8 @@ namespace Platformer.Gameplay
             {
                 Health.currentHP = Health.currentHP + 1;
                 HealthManager.instance.GetHealth();
-
             }
+            ScoreManager.instance.KilledEnemy();
         }
     }
 }
