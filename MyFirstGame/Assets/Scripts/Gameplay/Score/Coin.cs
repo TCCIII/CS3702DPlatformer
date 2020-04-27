@@ -13,7 +13,7 @@ namespace Plateformer.Mechanics
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                ScoreManager.instance.ChangeScore(coinValue);
+                CoinManager.instance.ChangeScore(coinValue);
             }
         }
     }

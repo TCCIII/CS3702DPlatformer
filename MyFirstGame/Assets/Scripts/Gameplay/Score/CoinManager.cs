@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class ScoreManager : MonoBehaviour
+public class CoinManager : MonoBehaviour
 {
-	public static ScoreManager instance;
+	public static CoinManager instance;
 	public TextMeshProUGUI text;
-	int score;
+	int count;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +20,13 @@ public class ScoreManager : MonoBehaviour
 
 	public void ChangeScore(int coinValue)
 	{
-		score += coinValue;
-		text.text = "Coins: " + score.ToString(); 
+		count += coinValue;
+		text.text = "Coins: " + count.ToString(); 
 	}
 
     public void SetScore(int coinValue)
     {
-        score = coinValue;
-        text.text = "Coins: " + score.ToString();
+        count = coinValue;
+        text.text = "Coins: " + count.ToString();
     }
 }
