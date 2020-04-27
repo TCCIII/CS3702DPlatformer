@@ -32,6 +32,7 @@ namespace Platformer.Gameplay
                     {
                         Schedule<EnemyTwoDeath>().enemy2 = enemy2;
                         player.Bounce(2);
+                        ScoreManager.instance.KilledEnemy();
                     }
                     else
                     {

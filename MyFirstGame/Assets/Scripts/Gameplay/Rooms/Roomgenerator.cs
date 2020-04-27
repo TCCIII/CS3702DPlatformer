@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Platformer.Mechanics;
 
 public class Roomgenerator : MonoBehaviour
 {
     internal RoomCreator populator;
+    public PlayerController player;
 
     public GameObject[] spawnRooms;
     public GameObject currentRoom;
@@ -64,7 +66,7 @@ public class Roomgenerator : MonoBehaviour
                 nextRoom = spawnRooms[index];
             }
             count++;
+            ScoreManager.instance.FinishRoom();
         }
-
     }
 }

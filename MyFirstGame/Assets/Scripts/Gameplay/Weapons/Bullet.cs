@@ -39,6 +39,7 @@ public class Bullet : MonoBehaviour
                 if (!enemyHealth.IsAlive)
                 {
                     Schedule<EnemyTwoDeath>().enemy2 = enemy;
+                    ScoreManager.instance.KilledEnemy();
                 }
             }
             else
