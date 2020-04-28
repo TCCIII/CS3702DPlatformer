@@ -51,11 +51,13 @@ namespace Platformer.Mechanics
 
         void Update()
         {
-            if (path2 != null)
-            {
-                if (mover2 == null) mover2 = path2.CreateMover(control2.maxSpeed2 * 0.5f);
-                control2.move2.x = Mathf.Clamp(mover2.Position.x - transform.position.x, -1, 1);
-            }
+
+           
+             if (path2 != null)
+             {
+                 if (mover2 == null) mover2 = path2.CreateMover(control2.maxSpeed2 * 0.5f);
+                 control2.move2.x = Mathf.Clamp(mover2.Position.x - transform.position.x, -1, 1);
+             }
         }
 
         public IEnumerator Invulnerability2()
