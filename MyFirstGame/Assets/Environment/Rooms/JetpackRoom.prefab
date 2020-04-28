@@ -54,7 +54,7 @@ MonoBehaviour:
   - {fileID: 7673389573556668737, guid: 3bc594e1e23ec57458e0af64aebb7152, type: 3}
   currentPlatform: {fileID: 7256409988804958789, guid: 3994c65b6d8f05740aa7ee1b5ac1608b,
     type: 3}
-  nextPlatform: {fileID: 6023876439513847754, guid: 9aac2844158e03141874150c4ce22ca2,
+  nextPlatform: {fileID: 7673389573556668737, guid: 7524102d1146a1740966c37c1d783c4b,
     type: 3}
   distancebetween: 0
 --- !u!60 &6575919155876625269

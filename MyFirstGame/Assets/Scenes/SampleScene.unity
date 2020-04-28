@@ -602,7 +602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4520396350849616, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4520396350849616, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1852,15 +1852,13 @@ MonoBehaviour:
   - {fileID: 7044036295457628425, guid: db26b8a9cdcb7a84196511268b26238b, type: 3}
   - {fileID: 4335948177659762206, guid: 5b5191d2ec7175d498655702eb8f4667, type: 3}
   - {fileID: 3872372507416753873, guid: 038f0511a523dbb48b8d83866c83b705, type: 3}
-  currentRoom: {fileID: 2086993566547200859, guid: d6c149f0d11d13c4da9ce491d1d14791,
+  currentRoom: {fileID: 7044036295457628425, guid: db26b8a9cdcb7a84196511268b26238b,
     type: 3}
-  nextRoom: {fileID: 5241210927603576800, guid: f707fc9bdfdde8f4abd155dab11589d6,
-    type: 3}
-  itemStore: {fileID: 3782764359664108917, guid: 2d33c940ff91ad34c86a9de304c4ac0f,
+  nextRoom: {fileID: 317428392971182721, guid: 1d681481861d6194c96f86dd17dcf701, type: 3}
+  itemStore: {fileID: 7673389573556668737, guid: e3f598a88c90c4b4d9837a3892e27b25,
     type: 3}
   miniBoss: {fileID: 5657168291915089478, guid: 6e8246e675e0ad144821422c2d329982,
     type: 3}
-  boss: {fileID: 1251505151781230922, guid: a60f5880335e53e4181d7b385ba7654b, type: 3}
   generationPoint: {fileID: 2142793675}
   distancebetween: 0
   count: 0
@@ -1876,7 +1874,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &228046557 stripped
 MonoBehaviour:
@@ -1985,7 +1983,7 @@ RectTransform:
   - {fileID: 746634941}
   - {fileID: 443710782}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2855,7 +2853,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &443710781
 GameObject:
@@ -3470,7 +3468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model:
-    virtualCamera: {fileID: 1946717924}
+    virtualCamera: {fileID: 0}
     player: {fileID: 1545728210}
     spawnPoint: {fileID: 421228357}
     jumpModifier: 1
@@ -5259,7 +5257,7 @@ Transform:
   - {fileID: 1652279867}
   - {fileID: 713838234}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1565427404
 GameObject:
@@ -5955,7 +5953,7 @@ Transform:
   m_Children:
   - {fileID: 742932004}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1952783330
 GameObject:
@@ -6418,7 +6416,7 @@ Transform:
   - {fileID: 2008364794}
   - {fileID: 8823346656125389458}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2110646551 stripped
 MonoBehaviour:

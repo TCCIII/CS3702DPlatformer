@@ -744,9 +744,9 @@ MonoBehaviour:
   - {fileID: 6023876439513847754, guid: 9aac2844158e03141874150c4ce22ca2, type: 3}
   - {fileID: 7673389573556668737, guid: 499232956f759f84bb7711ab09ab36a9, type: 3}
   - {fileID: 7673389573556668737, guid: 3bc594e1e23ec57458e0af64aebb7152, type: 3}
-  currentPlatform: {fileID: 7256409988804958789, guid: 3994c65b6d8f05740aa7ee1b5ac1608b,
+  currentPlatform: {fileID: 6023876439513847754, guid: 9aac2844158e03141874150c4ce22ca2,
     type: 3}
-  nextPlatform: {fileID: 6023876439513847754, guid: 9aac2844158e03141874150c4ce22ca2,
+  nextPlatform: {fileID: 7673389573556668737, guid: e3f598a88c90c4b4d9837a3892e27b25,
     type: 3}
   distancebetween: 0
 --- !u!60 &481687197434121314
