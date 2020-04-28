@@ -13,6 +13,7 @@ public class Roomgenerator : MonoBehaviour
     public GameObject nextRoom;
     public GameObject itemStore;
     public GameObject miniBoss;
+    public GameObject boss;
     int index;
 
     public Transform generationPoint;
@@ -36,7 +37,14 @@ public class Roomgenerator : MonoBehaviour
     {
         if (transform.position.x < generationPoint.position.x)
         {
-            if (count % 10 == 0)
+            if (count % 20 == 0)
+            {
+                //Generate Boss
+                transform.position = new Vector3(transform.position.x + distancebetween, transform.position.y, transform.position.z);
+                Instantiate(boss, transform.position, transform.rotation);
+                transform.position = new Vector3(transform.position.x + 20 + distancebetween, transform.position.y, transform.position.z);
+            }
+            else if (count % 10 == 0)
             {
                 //Generate Mini-Boss
                 transform.position = new Vector3(transform.position.x + distancebetween, transform.position.y, transform.position.z);
