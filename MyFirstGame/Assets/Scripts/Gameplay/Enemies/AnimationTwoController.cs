@@ -16,6 +16,7 @@ namespace Platformer.Mechanics
         /// Max horizontal speed.
         /// </summary>
         public float maxSpeed2 = 7;
+     
         /// <summary>
         /// Max jump velocity
         /// </summary>
@@ -25,7 +26,7 @@ namespace Platformer.Mechanics
         /// Used to indicated desired direction of travel.
         /// </summary>
         public Vector2 move2;
-
+       
         /// <summary>
         /// Set to true to initiate a jump.
         /// </summary>

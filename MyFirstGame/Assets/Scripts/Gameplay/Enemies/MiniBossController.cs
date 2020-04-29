@@ -1,37 +1,71 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Platformer.Gameplay;
 using UnityEngine;
+using static Platformer.Core.Simulation;
 
-public class MiniBossController: MonoBehaviour
+namespace Platformer.Mechanics
 {
-    public Transform player;
-    public float moveSpeed = 5f;
-    private Rigidbody2D rb;
-    private Vector2 movement;
+    /// <summary>
+    /// A simple controller for enemies. Provides movement control over a patrol path.
+    /// </summary>
+    [RequireComponent(typeof(MiniBossAnimation), typeof(Collider2D))]
+    public class MiniBossController : MonoBehaviour
+    {
+        public PatrolPath path3;
+        public AudioClip ouch3;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb = this.GetComponent<Rigidbody2D>();
-    }
+        internal PatrolPath.Mover mover3;
+        internal MiniBossAnimation control3;
+        internal Collider2D _collider3;
+        internal AudioSource _audio3;
+        internal SpriteRenderer _spriteRenderer3;
+        public Health health;
 
-    // Update is called once per frame
-    void Update()
-    {
-        Vector3 direction = player.position - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        rb.rotation = angle;
-        direction.Normalize();
-        movement = direction;
+        private bool invincible3 = false;
 
-       
-    }
-    private void FixedUpdate()
-    {
-        moveCharacter(movement);
-    }
-    void moveCharacter(Vector2 direction)
-    {
-        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        public Bounds Bounds => _collider3.bounds;
+
+        void Awake()
+        {
+            control3 = GetComponent<MiniBossAnimation>();
+            _collider3 = GetComponent<Collider2D>();
+            _audio3 = GetComponent<AudioSource>();
+            _spriteRenderer3 = GetComponent<SpriteRenderer>();
+        }
+
+        void OnCollisionEnter2D(Collision2D collision)
+        {
+            var player = collision.gameObject.GetComponent<PlayerController>();
+            if (player != null)
+            {
+                if (!invincible3)
+                {
+                    var ev = Schedule<PlayerMiniBossCollision>();
+                    ev.player = player;
+                    ev.enemy3 = this;
+                }
+
+            }
+        }
+
+        void Update()
+        {
+
+
+            if (path3 != null)
+            {
+                if (mover3 == null) mover3 = path3.CreateMover(control3.maxSpeed3 * 0.5f);
+                control3.move3.x = Mathf.Clamp(mover3.Position.x - transform.position.x, -1, 1);
+            }
+        }
+
+        public IEnumerator Invulnerability3()
+        {
+
+            yield return new WaitForSecondsRealtime(3);
+            invincible3 = false;
+        }
     }
 }
+
