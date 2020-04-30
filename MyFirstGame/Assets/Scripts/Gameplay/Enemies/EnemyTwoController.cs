@@ -21,6 +21,8 @@ namespace Platformer.Mechanics
         internal AudioSource _audio2;
         internal SpriteRenderer _spriteRenderer2;
         public Health health;
+        public int enemyCHealth = 3;
+        public Bullet bullet;
 
         private bool invincible2 = false;
 
@@ -65,6 +67,10 @@ namespace Platformer.Mechanics
 
             yield return new WaitForSecondsRealtime(3);
             invincible2 = false;
+        }
+        public void enemydamage()
+        {
+            enemyCHealth = enemyCHealth - 1;
         }
     }
 }

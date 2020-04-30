@@ -62,7 +62,7 @@ namespace Platformer.Mechanics
 
         void Awake()
         {
-            currentHP = 3;
+            currentHP = 1000;
         }
 
         public int GetHealth()
