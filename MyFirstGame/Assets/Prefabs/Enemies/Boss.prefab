@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: 5834230786908793026}
   - component: {fileID: 5817224503115818672}
   - component: {fileID: 1607606079986229152}
+  - component: {fileID: 5140784799107353484}
   - component: {fileID: 2231805033638633160}
   - component: {fileID: 9211301047652061425}
-  - component: {fileID: 4362668434932728663}
-  - component: {fileID: 5533579882389721699}
   m_Layer: 13
   m_Name: Boss
   m_TagString: Enemy
@@ -243,6 +242,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5140784799107353484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5784856658785032278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e915edf9ebcc24c4796ea7849eac9c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path2: {fileID: 0}
+  ouch2: {fileID: 8300000, guid: 9611ef21930f43d41b17180ad0e179b0, type: 3}
+  health: {fileID: 0}
 --- !u!114 &2231805033638633160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,42 +291,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemySword: {fileID: 9113563862968463834, guid: d0afdda0a16cc8f4fabd4da74e1f4eed,
     type: 3}
---- !u!114 &4362668434932728663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5784856658785032278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63880e70de8f0b348b37f4f155a5cd54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minGroundNormalY: 0.65
-  gravityModifier: 1
-  velocity: {x: 0, y: 0}
-  maxSpeed4: 7
-  jumpTakeOffSpeed4: 7
-  move4: {x: 0, y: 0}
-  jump4: 0
-  stopJump4: 0
---- !u!114 &5533579882389721699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5784856658785032278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ee08ca8b3e59024d932ab80e4604ae4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  path4: {fileID: 0}
-  ouch4: {fileID: 0}
-  health: {fileID: 0}
-  BossCHeath: 20
 --- !u!1 &6900611032357315685
 GameObject:
   m_ObjectHideFlags: 0
