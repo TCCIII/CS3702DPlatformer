@@ -16,7 +16,7 @@ public class EnemyWaveFire : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fireRate = 3.5f;
+        fireRate = 1.5f;
         nextFire = Time.time;
 
     }

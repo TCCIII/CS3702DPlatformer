@@ -34,6 +34,11 @@ public class EnemyWave : MonoBehaviour
     {
         direction1 = direction.normalized;
 
+        if (direction1.x > 0)
+        {
+            transform.Rotate(0f, 180f, 0f);
+        }
+
         isReady = true;
     }
 

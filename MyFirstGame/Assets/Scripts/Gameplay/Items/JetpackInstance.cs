@@ -34,11 +34,16 @@ namespace Platformer.Mechanics
         {
             ItemDescriptionManager.instance.Clear();
             PlayerController.hasjetpack = true;
+            PlayerController.jetpackCount++;
         }
 
         public void RemoveAbility()
         {
-            PlayerController.hasjetpack = false;
+            PlayerController.jetpackCount--;
+            if(PlayerController.jetpackCount <= 0)
+            {
+                PlayerController.hasjetpack = false;
+            }
         }
 
         public void Description()

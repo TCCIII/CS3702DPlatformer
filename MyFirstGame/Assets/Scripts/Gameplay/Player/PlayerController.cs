@@ -27,7 +27,9 @@ namespace Platformer.Mechanics
         /// </summary>
         public float jumpTakeOffSpeed = 7;
         public static bool hasjetpack;
-        public int jetpackdur = 0;
+        public static int jetpackCount = 0;
+        public static int jetpackdur = 0;
+        public bool activateJetpack = false;
 
         public JumpState jumpState = JumpState.Grounded;
         private bool stopJump;
@@ -93,9 +95,13 @@ namespace Platformer.Mechanics
                     }
                     break;
                 case JumpState.InFlight:
-                    if (Input.GetButton("Jump") && hasjetpack)
+                    if(Input.GetButtonUp("Jump"))
                     {
-                       if(jetpackdur<200)
+                        activateJetpack = true;
+                    }
+                    if (Input.GetButton("Jump") && hasjetpack && activateJetpack)
+                    {
+                       if(jetpackdur < (200 * jetpackCount))
                        {
                          velocity.y = 4;
                          jetpackdur++;
@@ -105,6 +111,7 @@ namespace Platformer.Mechanics
                     {
                         Schedule<PlayerLanded>().player = this;
                         jumpState = JumpState.Landed;
+                        activateJetpack = false;
                     }
                     else if (Input.GetAxis("Vertical") < 0)
                     {

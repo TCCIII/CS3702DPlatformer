@@ -64,4 +64,13 @@ public class ScoreManager : MonoBehaviour
         coins++;
         CollectPoint();
     }
+
+    public void CollectCoin(int i)
+    {
+        while(i >= 1)
+        {
+            CollectCoin();
+            i--;
+        }
+    }
 }

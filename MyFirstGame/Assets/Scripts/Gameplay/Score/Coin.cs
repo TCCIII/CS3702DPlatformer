@@ -14,7 +14,7 @@ namespace Plateformer.Mechanics
             if (other.gameObject.CompareTag("Player"))
             {
                 CoinManager.instance.ChangeScore(coinValue);
-                ScoreManager.instance.CollectCoin();
+                ScoreManager.instance.CollectCoin(coinValue);
             }
         }
     }

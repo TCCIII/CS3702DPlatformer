@@ -58,11 +58,11 @@ GameObject:
   - component: {fileID: 5396735809805686985}
   - component: {fileID: 5379753715302078139}
   - component: {fileID: 890879756857765803}
-  - component: {fileID: 6721037317987122055}
-  - component: {fileID: 354273122174906051}
   - component: {fileID: 7333912031260418298}
+  - component: {fileID: 6066910009570081027}
+  - component: {fileID: 530445502759226133}
   m_Layer: 13
-  m_Name: MiniBoss 1 1
+  m_Name: MiniBoss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -286,40 +286,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6721037317987122055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5356371114051168349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e915edf9ebcc24c4796ea7849eac9c84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  path2: {fileID: 0}
-  ouch2: {fileID: 8300000, guid: 9611ef21930f43d41b17180ad0e179b0, type: 3}
---- !u!114 &354273122174906051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5356371114051168349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f9a44db9b4993449f833ff409909a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minGroundNormalY: 0.65
-  gravityModifier: 1
-  velocity: {x: 0, y: 0}
-  maxSpeed2: 7
-  jumpTakeOffSpeed2: 7
-  move2: {x: 0, y: 0}
-  jump2: 0
-  stopJump2: 0
 --- !u!114 &7333912031260418298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,3 +300,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemySword: {fileID: 9113563862968463834, guid: d0afdda0a16cc8f4fabd4da74e1f4eed,
     type: 3}
+--- !u!114 &6066910009570081027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5356371114051168349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa98c9d52ba3c04a93ed51a1374fe55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minGroundNormalY: 0.65
+  gravityModifier: 1
+  velocity: {x: 0, y: 0}
+  maxSpeed3: 7
+  jumpTakeOffSpeed3: 7
+  move3: {x: 0, y: 0}
+  jump3: 0
+  stopJump3: 0
+--- !u!114 &530445502759226133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5356371114051168349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8bfcb410613d948b3054cee762d5bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path3: {fileID: 0}
+  ouch3: {fileID: 0}
+  health: {fileID: 0}
