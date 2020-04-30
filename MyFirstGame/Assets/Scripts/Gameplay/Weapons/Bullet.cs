@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D rb;
-
+    public BossController enemy2;
     public MiniBossController enemy1;
     public EnemyTwoController enemy;
     public PlatformerModel model = Simulation.GetModel<PlatformerModel>();
@@ -66,6 +66,27 @@ public class Bullet : MonoBehaviour
             else
             {
                 Schedule<MiniBossDeath>().enemy3 = enemy1;
+            }
+
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            enemy2 = collision.gameObject.GetComponent<BossController>();
+            var enemyHealth = enemy2.GetComponent<Health>();
+
+            if (enemyHealth != null)
+            {
+                enemyHealth.Decrement();
+                if (!enemyHealth.IsAlive)
+                {
+                    Schedule<BossDeath>().enemy4 = enemy2;
+                }
+            }
+            else
+            {
+                Schedule<BossDeath>().enemy4 = enemy2;
             }
 
             Destroy(gameObject);

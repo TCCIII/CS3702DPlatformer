@@ -202,7 +202,7 @@ PrefabInstance:
     - target: {fileID: 5356371114051168349, guid: 1d984021fb353534eb7ab03001fd1a3e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6721037317987122055, guid: 1d984021fb353534eb7ab03001fd1a3e,
         type: 3}
@@ -3523,8 +3523,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model:
     virtualCamera: {fileID: 0}
-    player: {fileID: 1545728210}
-    spawnPoint: {fileID: 421228357}
+    player: {fileID: 0}
+    spawnPoint: {fileID: 0}
     jumpModifier: 1
     jumpDeceleration: 0.2
 --- !u!4 &662683904
@@ -4546,6 +4546,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   parallaxeffect: 0.4
+--- !u!1 &1181735120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1181735121}
+  - component: {fileID: 1181735122}
+  m_Layer: 0
+  m_Name: EnemyWaveFire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1181735121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181735120}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 60.631737, y: -7.340562, z: -24.8125}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 5350807067725774276}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1181735122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181735120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bb06392c2fde2647b239c38512aee04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyWaveGO: {fileID: 227315348305626528, guid: c506c79b31bc1e94ab61a157258273d8,
+    type: 3}
 --- !u!1001 &1215660113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6657,6 +6702,20 @@ MonoBehaviour:
   path4: {fileID: 1518264470}
   ouch4: {fileID: 0}
   health: {fileID: 0}
+--- !u!114 &5356371114722034731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5356371114722034722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bb06392c2fde2647b239c38512aee04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyWaveGO: {fileID: 227315348305626528, guid: c506c79b31bc1e94ab61a157258273d8,
+    type: 3}
 --- !u!1001 &7498710791129987322
 PrefabInstance:
   m_ObjectHideFlags: 0
